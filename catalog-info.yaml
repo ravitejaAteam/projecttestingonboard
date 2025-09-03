@@ -1,0 +1,26 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: "my-website"
+  description: "This repository ..."
+  annotations:
+    github.com/project-slug: Ascentt-Business-Systems/repo-name
+    # AWS Cost Insights Plugin - Required for cost tracking
+    aws.amazon.com/cost-insights-tags: cost-project=project-name,cost-service=my-website
+    # SonarQube Plugin - Required for code quality analysis
+    sonarqube.org/project-key: repo-name
+  # links: # remove if not applicable
+  #   - url: <link to your service>
+  #     title: My Website
+  #     icon: service
+  tags:
+    - my-website
+    - nodejs
+    - frontend
+    - react
+spec:
+  type: service
+  owner: Raviteja Varma
+  lifecycle: experimental
+  # system: <Host System Name> # remove if not applicable
+  # subcomponentOf: <Parent Catalog Name/Project Name> # remove if not applicable
